@@ -5,6 +5,7 @@
     vlc
     android-studio
     chromium
+    alacritty
   ];
 
   imports = [
