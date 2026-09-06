@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     vlc
     android-studio
+    chromium
   ];
 
   imports = [
