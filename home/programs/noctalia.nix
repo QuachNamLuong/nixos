@@ -30,10 +30,7 @@
 
       plugins = {
         auto_update = "all";
-        enabled = [
-          "noctalia/screen_recorder"
-          "levi/warp"
-        ];
+        enabled = ["noctalia/screen_recorder"];
 
         sources = [
           {
