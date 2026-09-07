@@ -9,6 +9,18 @@
     enable = true;
     
     settings = {
+      bar.default = {
+          position = "top";        # Options: "top", "bottom", "left", "right"
+          thickness = 24;
+          padding = 10;
+          widget_spacing = 8;
+
+          # Layout sections (left/top, center, right/bottom)
+          start = [ "workspaces" "window_title" ];
+          center = [ "clock" ];
+          end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
+        };
+
       plugins = {
         auto_update = "all";
         enable = [

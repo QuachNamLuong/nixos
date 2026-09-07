@@ -4,7 +4,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ 
-      inputs.umbriel.packages.${pkgs.system}.default
+      inputs.umbriel.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs.xdg-desktop-portal-gtk
     ];
     config.common.default = [ "gtk" ];
