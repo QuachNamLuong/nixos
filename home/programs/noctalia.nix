@@ -26,10 +26,6 @@
           end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
         };
 
-      bar.widgets = {
-
-      }
-
       plugins = {
         auto_update = "all";
         enabled = ["noctalia/screen_recorder"];
