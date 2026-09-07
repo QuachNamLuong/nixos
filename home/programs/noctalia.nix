@@ -16,7 +16,7 @@
           widget_spacing = 8;
 
           # Layout sections (left/top, center, right/bottom)
-          start = [ "workspaces" "window_title" ];
+          start = [ "workspaces" "wallpaper" ];
           center = [ "clock" ];
           end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
         };
