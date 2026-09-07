@@ -21,7 +21,7 @@
           thickness = 24;
           padding = 10;
           widget_spacing = 8;
-          start = [ "workspaces" "wallpaper" ];
+          start = [ "workspaces" "wallpaper" "screen_recorder" ];
           center = [ "clock" ];
           end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
         };
