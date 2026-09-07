@@ -30,7 +30,7 @@
 
       plugins = {
         auto_update = "all";
-        enable = [
+        enabled = [
           "noctalia/screen_recorder"
           "levi/warp"
         ];
