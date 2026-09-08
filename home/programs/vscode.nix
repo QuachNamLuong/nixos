@@ -5,6 +5,7 @@ let
     "files.autoSaveDelay" = 1000;
     "explorer.confirmPasteNative" = false;
     "explorer.confirmDelete" = false;
+    "git.enableSmartCommit"= true;
   };
 in {
   programs.vscodium = {
