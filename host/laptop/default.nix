@@ -3,5 +3,6 @@
     ./configuration.nix
     ./user.nix
     ../../modules
+    ./modules
   ];
 }
