@@ -71,7 +71,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs stateVersion username host; }; 
-              users.${username} = import ./home;
+              users.${username} = import ./host/${host}/home;
             };
           }
         ];
