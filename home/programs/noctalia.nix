@@ -21,16 +21,16 @@
           thickness = 24;
           padding = 10;
           widget_spacing = 8;
-          start = [ "workspaces" "wallpaper" "noctalia/screen_recorder" ];
+          start = [ "workspaces" "wallpaper" "recorder" ];
           center = [ "clock" ];
           end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
         };
 
       plugins = {
+        enabled = [ "noctalia/screen_recorder" ];
         auto_update = "all";
-        enabled = ["noctalia/screen_recorder"];
 
-        sources = [
+        source = [
           {
             name = "official";
             kind = "git";
