@@ -6,6 +6,5 @@
 
     ./input-method/fcitx5-lotus.nix
     ./programs
-    ./system
   ];
 }
