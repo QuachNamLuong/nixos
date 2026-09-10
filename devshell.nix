@@ -5,8 +5,4 @@ pkgs.mkShell {
     nodejs_22
     pnpm
   ];
-
-  shellHook = ''
-    echo "Node $(node -v) dev environment loaded!"
-  '';
 }
