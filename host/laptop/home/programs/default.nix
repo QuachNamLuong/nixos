@@ -7,6 +7,7 @@
     chromium
     alacritty
     remmina
+    thorium
   ];
 
   imports = [
