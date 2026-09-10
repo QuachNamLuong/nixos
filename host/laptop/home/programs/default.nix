@@ -6,6 +6,7 @@
     android-studio
     chromium
     alacritty
+    remmina
   ];
 
   imports = [

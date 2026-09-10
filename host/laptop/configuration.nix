@@ -57,12 +57,6 @@
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 
-  # Power
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
-
-  hardware.bluetooth.enable = true;
-
   # Font
   fonts = {
     packages = with pkgs; [

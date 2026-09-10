@@ -1,10 +1,10 @@
 { ... }:
-
 {
   imports = [
-    ./gpu/intel.nix
-
-    ./input-method/fcitx5-lotus.nix
+    ./hardware
     ./programs
+
+    ./packages.nix
+    ./environment.nix
   ];
 }
