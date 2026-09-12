@@ -5,7 +5,7 @@
   programs.umbriel = {
     enable = true;
     settings = {
-      general.autostart = [ "noctalia" "fcitx5 -d" ];
+      general.autostart = [ "noctalia" "fcitx5 -d" "snixembed" ];
       layout.gap = 5;
       input.keyboard.layout = "us";
       keybinds = {

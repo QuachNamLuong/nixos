@@ -16,5 +16,6 @@
     ./noctalia.nix
     ./umbriel.nix
     ./uv.nix
+    ./snixembed.nix
   ];
 }
