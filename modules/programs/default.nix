@@ -10,5 +10,6 @@
     ./v4l.nix
     ./warp.nix
     ./fcitx5.nix
+    ./snixembed.nix
   ];
 }
