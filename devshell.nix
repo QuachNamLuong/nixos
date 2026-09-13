@@ -5,5 +5,6 @@ pkgs.mkShell {
     nodejs_22
     pnpm
     go
+    bun
   ];
 }
