@@ -13,10 +13,13 @@ in {
 
     profiles = {
       default = {
-        userSettings = commonSettings;
+        userSettings = commonSettings // {
+          
+        };
 
         extensions = [
           pkgs.vscode-marketplace.jnoortheen.nix-ide
+          pkgs.vscode-marketplace.golang.go
         ];
       };
 
@@ -26,6 +29,15 @@ in {
         };
         extensions = [
           pkgs.vscode-marketplace.jnoortheen.nix-ide
+        ];
+      };
+
+      go = {
+        userSettings = commonSettings // {
+
+        };
+        extensions = [
+          pkgs.vscode-marketplace.golang.go
         ];
       };
     };
