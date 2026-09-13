@@ -65,6 +65,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs stateVersion username host; }; 
         modules = [
+          ./modules
           ./host/${host}
           nix-flatpak.nixosModules.nix-flatpak
           {
@@ -76,7 +77,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs stateVersion username host; }; 
-              users.${username} = import ./host/${host}/home;
+              users.${username} = import ./home;
             };
           }
         ];

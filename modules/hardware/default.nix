@@ -3,6 +3,7 @@
   imports = [
     ./graphics
     ./laptop
+    #./desktop
 
     ./audio.nix
     ./power.nix
