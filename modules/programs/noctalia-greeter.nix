@@ -21,7 +21,7 @@
         layout = "us";
       };
 
-      output.scale = "eDP-1:1.2";
+      output.scales = "eDP-1:1.2";
     };
   };
 }
