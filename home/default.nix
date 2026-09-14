@@ -7,6 +7,6 @@
 
   imports = [
     ./programs
-    ./configs
+    # ./configs
   ];
 }
