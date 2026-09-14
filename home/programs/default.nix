@@ -6,7 +6,7 @@
     ./obs-studio.nix
     ./vscode.nix
     ./noctalia.nix
-    ./umbriel.nix
+    # ./umbriel.nix
     ./uv.nix
   ];
 }

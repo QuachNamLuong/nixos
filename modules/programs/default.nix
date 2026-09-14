@@ -5,7 +5,7 @@
     ./nautilus.nix
     ./nix-flatpak.nix
     ./noctalia-greeter.nix
-    ./umbriel.nix
+    # ./umbriel.nix
     ./steam.nix
     ./v4l.nix
     ./warp.nix
