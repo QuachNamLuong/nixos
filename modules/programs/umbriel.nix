@@ -1,7 +1,12 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.umbriel.nixosModules.default ];
+  # imports = [ inputs.umbriel.nixosModules.default ];
+
+  environment.systemPackages = with pkgs; [
+    umbriel
+  ];
+
   programs.umbriel.enable = true;
 
   environment.sessionVariables = {
