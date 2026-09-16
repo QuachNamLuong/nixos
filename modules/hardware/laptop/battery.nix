@@ -12,7 +12,7 @@
   # TLP tự động điều chỉnh CPU, ổ cứng, card mạng... dựa trên nguồn điện.
   # Chỉ chạy trên laptop — desktop không có pin để quản lý.
   services.tlp = {
-    enable = true;
+    enable = false;
 
     settings = {
       # --- Chính sách CPU khi dùng PIN ---
@@ -51,5 +51,5 @@
   # =========================================================
   # TLP xung đột với power-profiles-daemon (thường được GNOME/KDE yêu cầu).
   # Phải tắt PPD để tránh hai công cụ tranh nhau quản lý năng lượng.
-  services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = true;
 }
