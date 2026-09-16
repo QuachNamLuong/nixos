@@ -36,7 +36,9 @@ in {
 
       go = {
         userSettings = commonSettings // {
-
+          "go.alternateTools": {
+            "gopls" = "gopls"
+          }
         };
         extensions = [
           pkgs.vscode-marketplace.golang.go
