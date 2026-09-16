@@ -11,6 +11,8 @@ in {
   programs.vscodium = {
     enable = true;
 
+    mutableExtensionsDir = false;
+
     profiles = {
       default = {
         userSettings = commonSettings // {

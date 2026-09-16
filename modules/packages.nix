@@ -6,5 +6,7 @@
     chromium
     alacritty
     remmina
+    discord-ptb
+    kdePackages.plasma-workspace
   ];
 }

@@ -1,14 +1,17 @@
-{ pkgs, inputs, ... }:
-
-{
-  imports = [ inputs.umbriel.homeModules.default ];
+{ pkgs, inputs, ... }: {
+  imports = [ inputs.umbriel.homeModules.umbriel ];
 
   programs.umbriel = {
     enable = true;
     settings = {
-      general.autostart = [ "noctalia" "fcitx5 -d" ];
+      general = {
+        autostart = [ "noctalia" "fcitx5 -d" ];
+        mod_key = "Super";
+        xwayland = true;
+      };
+
       layout.gap = 5;
-      xwayland = true;
+
       input.keyboard.layout = "us";
 
       keybinds = {
@@ -29,16 +32,14 @@
         "XF86AudioLowerVolume" = "spawn:noctalia msg volume-down 5%";
         "XF86AudioMute" = "spawn:noctalia msg volume-mute";
         "XF86AudioMicMute" = "spawn:noctalia msg mic-mute";
-
-        # Đưa về dạng String chuẩn đồng nhất (nếu Umbriel không hỗ trợ inline table)
         "XF86MonBrightnessUp" = "spawn:noctalia msg brightness-up 5";
         "XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down 5";
       };
 
       output = {
-        "eDP-1" = {
+        eDP-1 = {
           mode = "1920x1080@60";
-          scale = 1.2; # 2. Sửa thành số thực Float (bỏ dấu ngoặc kép)
+          scale = 1.2;
         };
       };
     };
