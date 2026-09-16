@@ -40,7 +40,7 @@
     home-manager, 
     noctalia, 
     noctalia-greeter, 
-    # umbriel, 
+    umbriel, 
     nix-flatpak, 
     flake-utils, 
     nix-vscode-extensions, 
