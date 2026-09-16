@@ -1,18 +1,12 @@
 { config, lib, pkgs, ... }:
 {
   # =========================================================
-  # LƯU Ý: services.upower.enable ĐÃ CHUYỂN SANG power.nix
-  # vì desktop cũng cần UPower cho UPS và chuột không dây.
-  # Không khai báo lại ở đây để tránh trùng lặp option.
-  # =========================================================
-
-  # =========================================================
   # 1. QUẢN LÝ NĂNG LƯỢNG BẰNG TLP
   # =========================================================
   # TLP tự động điều chỉnh CPU, ổ cứng, card mạng... dựa trên nguồn điện.
   # Chỉ chạy trên laptop — desktop không có pin để quản lý.
   services.tlp = {
-    enable = false;
+    enable = true;
 
     settings = {
       # --- Chính sách CPU khi dùng PIN ---
@@ -39,17 +33,10 @@
       STOP_CHARGE_THRESH_BAT0 = 80;
 
       # --- Tiết kiệm điện cho ổ cứng khi dùng pin (tùy chọn) ---
-      # DISK_APM_LEVEL_ON_BAT = "128 128";
+      DISK_APM_LEVEL_ON_BAT = "128 128";
 
       # --- Tắt đèn bàn phím khi dùng pin (tùy chọn, tùy máy) ---
-      # KBD_BACKLIGHT_ON_BAT = 0;
+      KBD_BACKLIGHT_ON_BAT = 0;
     };
   };
-
-  # =========================================================
-  # 2. VÔ HIỆU HÓA CÁC CÔNG CỤ XUNG ĐỘT
-  # =========================================================
-  # TLP xung đột với power-profiles-daemon (thường được GNOME/KDE yêu cầu).
-  # Phải tắt PPD để tránh hai công cụ tranh nhau quản lý năng lượng.
-  services.power-profiles-daemon.enable = true;
 }
