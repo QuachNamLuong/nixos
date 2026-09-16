@@ -12,5 +12,6 @@
     ./fcitx5.nix
     ./nix-ld.nix
     ./niri.nix
+    ./hyprland.nix
   ];
 }

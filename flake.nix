@@ -1,6 +1,14 @@
 {
   description = "NixOS config with Home Manager";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://noctalia.cachix.org" 
+      "https://cache.nixos.org/"
+    ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -8,14 +16,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    noctalia.url = "github:noctalia-dev/noctalia";
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     umbriel  = {
-      url = "git+https://github.com/noctalia-dev/umbriel";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/umbriel";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-vscode-extensions = {
@@ -32,7 +40,7 @@
     home-manager, 
     noctalia, 
     noctalia-greeter, 
-    umbriel, 
+    # umbriel, 
     nix-flatpak, 
     flake-utils, 
     nix-vscode-extensions, 
