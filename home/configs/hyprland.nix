@@ -19,7 +19,7 @@
       ];
 
       bind = [
-        "$mod, Q, exec, kitty"
+        "$mod, Q, exec, alacritty"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, E, exec, dolphin"
