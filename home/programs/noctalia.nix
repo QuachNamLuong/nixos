@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 
 {
   imports = [
@@ -21,13 +21,13 @@
           thickness = 24;
           padding = 10;
           widget_spacing = 8;
-          start = [ "workspaces" "wallpaper" "recorder" ];
+          start = [ "workspaces" "wallpaper" "recorder" "noctalia/screen_recorder" ];
           center = [ "clock" ];
           end = [ "tray" "bluetooth" "network" "volume" "battery" "session" ];
         };
 
       plugins = {
-        # enabled = [ "noctalia/screen_recorder" ];
+        enabled = [ "noctalia/screen_recorder" ];
         auto_update = "all";
 
         source = [

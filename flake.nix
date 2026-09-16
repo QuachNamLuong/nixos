@@ -6,7 +6,17 @@
       "https://noctalia.cachix.org" 
       "https://cache.nixos.org/"
     ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+
+    trusted-substituters = [
+      "https://noctalia.cachix.org"
+      "https://cache.nixos.org/" 
+    ];
+
+    extra-trusted-public-keys = [ 
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+
+    trusted-users = ["root" "@wheel"];
   };
 
   inputs = {

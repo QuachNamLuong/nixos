@@ -7,7 +7,5 @@
     alacritty
     remmina
     discord-ptb
-    kdePackages.plasma-workspace
-    kitty
   ];
 }
