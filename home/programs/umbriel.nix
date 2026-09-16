@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  imports = [ inputs.umbriel.homeModules.umbriel ];
+  imports = [ inputs.umbriel.homeModules.default ];
 
   programs.umbriel = {
     enable = true;
