@@ -41,7 +41,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    flake-utils.url = "github:numtide/flake-utils";
   };
   
   outputs = inputs @ { 
@@ -52,7 +51,6 @@
     noctalia-greeter, 
     umbriel, 
     nix-flatpak, 
-    flake-utils, 
     nix-vscode-extensions, 
     ...
     }:
@@ -61,15 +59,6 @@
       username = "luong";
       host = "laptop";
     in
-      (flake-utils.lib.eachDefaultSystem (system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        {
-          devShells.default = import ./devshell.nix { inherit pkgs stateVersion username host; };
-        }
-      ))
-      //
       {
       nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

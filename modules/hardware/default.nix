@@ -2,9 +2,8 @@
 {
   imports = [
     ./graphics
-    ./laptop
-    #./desktop
 
+    ./battery.nix
     ./audio.nix
     ./power.nix
     ./bluetooth.nix

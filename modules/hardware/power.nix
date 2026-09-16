@@ -8,7 +8,7 @@
   # để hiển thị trạng thái nguồn. Hoạt động trên cả laptop và desktop.
   services.upower.enable = true;
 
-  # services.thermald.enable = true;
+  services.thermald.enable = true;
 
   # =========================================================
   # 2. LOGIND — Quản lý phiên làm việc và hành vi nguồn
