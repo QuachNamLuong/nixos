@@ -11,6 +11,5 @@
     ./warp.nix
     ./fcitx5.nix
     ./gamemode.nix
-    ./direnv.nix
   ];
 }
