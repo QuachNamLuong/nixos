@@ -7,5 +7,6 @@
     alacritty
     remmina
     discord-ptb
+    rustdesk-flutter
   ];
 }
