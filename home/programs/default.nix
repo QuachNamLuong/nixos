@@ -7,5 +7,6 @@
     ./vscode.nix
     ./noctalia.nix
     ./umbriel.nix
+    ./nixvim.nix
   ];
 }
