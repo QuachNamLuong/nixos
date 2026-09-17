@@ -36,13 +36,11 @@ in {
 
       go = {
         userSettings = commonSettings // {
-          "go.alternateTools" = {
-              "gopls" = "gopls";
-          };
+
         };
         extensions = [
           pkgs.vscode-marketplace.golang.go
-          pkgs.vscode-marketplace.mkhl.direnv
+          pkgs.vscode-marketplace.jnoortheen.nix-ide
         ];
       };
     };
