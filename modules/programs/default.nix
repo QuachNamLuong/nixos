@@ -2,7 +2,6 @@
   imports = [
     ./gpu-screen-recorder.nix
     ./libreoffice.nix
-    ./nautilus.nix
     ./nix-flatpak.nix
     ./noctalia-greeter.nix
     ./umbriel.nix
