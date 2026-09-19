@@ -8,6 +8,9 @@
         autostart = [ "noctalia" "fcitx5 -d" ];
         mod_key = "Super";
         xwayland = true;
+        show_cheatsheet = true;
+        focus_on_activate = false;
+        honor_restored_maximize = false;
       };
 
       layout.gap = 5;

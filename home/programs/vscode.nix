@@ -41,6 +41,18 @@ in {
         extensions = [
           pkgs.vscode-marketplace.golang.go
           pkgs.vscode-marketplace.jnoortheen.nix-ide
+          pkgs.vscode-marketplace.a-h.templ
+        ];
+      };
+
+      tauri = {
+        userSettings = commonSettings // {
+
+        };
+        extensions = [
+          pkgs.vscode-marketplace.rust-lang.rust-analyzer
+          pkgs.vscode-marketplace.jnoortheen.nix-ide
+          pkgs.vscode-marketplace.bradlc.vscode-tailwindcss
         ];
       };
     };

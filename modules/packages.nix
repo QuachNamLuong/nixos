@@ -8,5 +8,6 @@
     remmina
     discord-ptb
     rustdesk-flutter
+    yazi
   ];
 }
