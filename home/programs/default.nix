@@ -8,5 +8,6 @@
     ./noctalia.nix
     ./umbriel.nix
     ./nixvim.nix
+    ./virt-manager.nix
   ];
 }
