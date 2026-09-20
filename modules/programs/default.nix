@@ -11,5 +11,6 @@
     ./fcitx5.nix
     ./gamemode.nix
     ./virt-manager.nix
+    ./nix-ld.nix
   ];
 }
