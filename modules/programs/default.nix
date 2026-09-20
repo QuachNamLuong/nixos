@@ -10,5 +10,6 @@
     ./warp.nix
     ./fcitx5.nix
     ./gamemode.nix
+    ./virt-manager.nix
   ];
 }
