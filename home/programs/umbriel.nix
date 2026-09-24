@@ -19,10 +19,10 @@
 
       keybinds = {
         # Spawn
-        "Mod+T" = "spawn:alacritty";
+        "Mod+T" = "spawn:kitty";
         "Mod+B" = "spawn:chromium";
         "Mod+D" = "spawn:noctalia msg panel-toggle launcher";
-        "Mod+E" = "spawn:nautilus";
+        "Mod+E" = "spawn:kitty -e yazi";
         "Print" = "spawn:noctalia msg screenshot-region";
         "Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen";
         "XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up 5%";
