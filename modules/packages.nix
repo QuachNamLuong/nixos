@@ -4,10 +4,11 @@
     vlc
     android-studio
     chromium
-    alacritty
+    kitty
     remmina
     discord-ptb
     rustdesk-flutter
     yazi
+    pgadmin4-desktopmode
   ];
 }
