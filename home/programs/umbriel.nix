@@ -28,6 +28,8 @@
       keybinds = {
         # Applications and session
         "Mod+Return" = { action = "spawn:kitty"; repeat = false; };
+        "Mod+B" = { action = "spawn:chromium"; repeat = false; };
+        "Mod+E" = { action = "spawn:kitty -e yazi"; repeat = false; };
         "Mod" = "spawn:noctalia msg panel-toggle launcher";
         "Mod+Q" = { action = "window-close"; repeat = false; };
         "Mod+Escape" = "session-quit";
