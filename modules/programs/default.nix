@@ -12,5 +12,6 @@
     ./gamemode.nix
     ./virt-manager.nix
     ./nix-ld.nix
+    ./waydroid.nix
   ];
 }
