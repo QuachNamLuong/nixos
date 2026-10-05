@@ -9,6 +9,5 @@
     discord-ptb
     rustdesk-flutter
     yazi
-    pgadmin4-desktopmode
   ];
 }
