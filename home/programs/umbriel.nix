@@ -25,6 +25,15 @@
         };
       };
 
+      general = {
+        autostart = [
+          "noctalia"
+        ];
+        xwayland = true;
+        xwayland_native_resolution = false;
+        mod_key = "Super";
+      };
+
       keybinds = {
         # Applications and session
         "Mod+Return" = { action = "spawn:kitty"; repeat = false; };
