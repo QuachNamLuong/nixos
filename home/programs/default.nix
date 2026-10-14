@@ -9,5 +9,6 @@
     ./umbriel.nix
     ./nixvim.nix
     ./virt-manager.nix
+    ./ssh.nix
   ];
 }
