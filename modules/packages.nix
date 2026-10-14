@@ -5,9 +5,6 @@
     android-studio
     chromium
     kitty
-    remmina
-    discord-ptb
-    rustdesk-flutter
     yazi
   ];
 }
