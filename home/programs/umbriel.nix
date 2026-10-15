@@ -32,6 +32,7 @@
         xwayland = true;
         xwayland_native_resolution = false;
         mod_key = "Super";
+        honor_restored_maximize = true;
       };
 
       keybinds = {
