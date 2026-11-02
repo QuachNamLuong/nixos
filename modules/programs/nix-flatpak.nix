@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
+  imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
   xdg.portal = {
     enable = true;
     extraPortals = [ 
