@@ -9,5 +9,6 @@
     ./umbriel.nix
     ./virt-manager.nix
     ./ssh.nix
+    ./devenv.nix
   ];
 }

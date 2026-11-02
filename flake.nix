@@ -2,23 +2,9 @@
   description = "NixOS config with Home Manager";
 
   nixConfig = {
-    extra-substituters = [
-      "https://noctalia.cachix.org" 
-      "https://cache.nixos.org/"
-      "https://nix-community.cachix.org"
-    ];
-
-    trusted-substituters = [
-      "https://noctalia.cachix.org"
-      "https://cache.nixos.org/" 
-    ];
-
-    extra-trusted-public-keys = [ 
-      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
-
-    trusted-users = [ "root" "@wheel" "luong" ];
+    extra-substituters = [ "https://noctalia.cachix.org" "https://umbriel.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw=" ];
+    trusted-users = [ "root" "@wheel" "luong" ]; 
   };
 
   inputs = {
@@ -28,24 +14,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
-    noctalia-greeter = {
-      url = "github:noctalia-dev/noctalia-greeter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    umbriel  = {
-      url = "github:noctalia-dev/umbriel";
-    };
+    umbriel.url = "github:noctalia-dev/umbriel/cachix";
 
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
   
   outputs = inputs @ { 
@@ -53,11 +29,9 @@
     nixpkgs, 
     home-manager, 
     noctalia, 
-    noctalia-greeter, 
     umbriel, 
     nix-flatpak, 
     nix-vscode-extensions,
-    nixvim, 
     ...
     }:
     let
