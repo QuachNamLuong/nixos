@@ -48,7 +48,6 @@
         modules = [
           ./modules
           ./host/${host}
-          nix-flatpak.nixosModules.nix-flatpak
           {
             nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
           }

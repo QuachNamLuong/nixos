@@ -37,21 +37,21 @@
       };
 
       keybinds = {
-        "XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up"; allow_when_locked = true; };
-        "XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down"; allow_when_locked = true; };
-        "XF86AudioMute" = { action = "spawn:noctalia msg volume-mute"; allow_when_locked = true; repeat = false; };
+        "XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up"; allow_when_locked = true; };
+        "XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down"; allow_when_locked = true; };
+        "XF86AudioMute" = { action = "spawn noctalia msg volume-mute"; allow_when_locked = true; repeat = false; };
 
         # Chụp màn hình: repeat = false để tránh bấm giữ chụp liên tục
-        "Print" = { action = "spawn:noctalia msg screenshot-region"; repeat = false; };
-        "Shift+Print" = { action = "spawn:noctalia msg screenshot-fullscreen"; repeat = false; };
-        "Alt+Print" = { action = "spawn:noctalia msg screenshot-window"; repeat = false; };
-        "Mod+Print" = { action = "spawn:noctalia msg screenshot-annotate"; repeat = false; };
+        "Print" = { action = "spawn noctalia msg screenshot-region"; repeat = false; };
+        "Shift+Print" = { action = "spawn noctalia msg screenshot-fullscreen"; repeat = false; };
+        "Alt+Print" = { action = "spawn noctalia msg screenshot-window"; repeat = false; };
+        "Mod+Print" = { action = "spawn noctalia msg screenshot-annotate"; repeat = false; };
 
         # Applications and session
-        "Mod+Return" = { action = "spawn:kitty"; repeat = false; };
-        "Mod+B" = { action = "spawn:chromium"; repeat = false; };
-        "Mod+E" = { action = "spawn:kitty -e yazi"; repeat = false; };
-        "Mod+D" = "spawn:noctalia msg panel-toggle launcher";
+        "Mod+Return" = { action = "spawn kitty"; repeat = false; };
+        "Mod+B" = { action = "spawn chromium"; repeat = false; };
+        "Mod+E" = { action = "spawn kitty -e yazi"; repeat = false; };
+        "Mod+D" = "spawn noctalia msg panel-toggle launcher";
         "Mod+Q" = { action = "window-close"; repeat = false; };
         "Mod+Escape" = "session-quit";
         "Mod+Shift+Escape" = {
@@ -94,24 +94,24 @@
         "Mod+O" = { action = "overview-toggle"; repeat = false; };
 
         # Workspaces
-        "Mod+1" = "workspace-switch:1";
-        "Mod+2" = "workspace-switch:2";
-        "Mod+3" = "workspace-switch:3";
-        "Mod+4" = "workspace-switch:4";
-        "Mod+5" = "workspace-switch:5";
-        "Mod+6" = "workspace-switch:6";
-        "Mod+7" = "workspace-switch:7";
-        "Mod+8" = "workspace-switch:8";
-        "Mod+9" = "workspace-switch:9";
-        "Mod+Shift+1" = "window-move-to-workspace:1";
-        "Mod+Shift+2" = "window-move-to-workspace:2";
-        "Mod+Shift+3" = "window-move-to-workspace:3";
-        "Mod+Shift+4" = "window-move-to-workspace:4";
-        "Mod+Shift+5" = "window-move-to-workspace:5";
-        "Mod+Shift+6" = "window-move-to-workspace:6";
-        "Mod+Shift+7" = "window-move-to-workspace:7";
-        "Mod+Shift+8" = "window-move-to-workspace:8";
-        "Mod+Shift+9" = "window-move-to-workspace:9";
+        "Mod+1" = "workspace-switch 1";
+        "Mod+2" = "workspace-switch 2";
+        "Mod+3" = "workspace-switch 3";
+        "Mod+4" = "workspace-switch 4";
+        "Mod+5" = "workspace-switch 5";
+        "Mod+6" = "workspace-switch 6";
+        "Mod+7" = "workspace-switch 7";
+        "Mod+8" = "workspace-switch 8";
+        "Mod+9" = "workspace-switch 9";
+        "Mod+Shift+1" = "window-move-to-workspace 1";
+        "Mod+Shift+2" = "window-move-to-workspace 2";
+        "Mod+Shift+3" = "window-move-to-workspace 3";
+        "Mod+Shift+4" = "window-move-to-workspace 4";
+        "Mod+Shift+5" = "window-move-to-workspace 5";
+        "Mod+Shift+6" = "window-move-to-workspace 6";
+        "Mod+Shift+7" = "window-move-to-workspace 7";
+        "Mod+Shift+8" = "window-move-to-workspace 8";
+        "Mod+Shift+9" = "window-move-to-workspace 9";
 
         # Scratchpad
         "Mod+Shift+Space" = { action = "window-move-to-scratchpad"; repeat = false; };
