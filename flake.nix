@@ -22,6 +22,7 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nixvim.url = "github:nix-community/nixvim";
   };
   
   outputs = inputs @ { 
@@ -32,6 +33,7 @@
     umbriel, 
     nix-flatpak, 
     nix-vscode-extensions,
+    nixvim,
     ...
     }:
     let
