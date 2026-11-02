@@ -2,7 +2,7 @@
 {
   programs.ssh = {
     enable = true;
-    # enableDefaultConfig = false;
+    enableDefaultConfig = false;
     # Host cụ thể của bạn
     settings."home-server" = {
       Hostname = "ssh.quachnamluong.dev";

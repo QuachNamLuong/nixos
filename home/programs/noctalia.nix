@@ -1,9 +1,7 @@
 { pkgs, inputs, config, ... }:
 
 {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
+  imports = [ inputs.noctalia.homeModules.default ];
 
   programs.noctalia = {
     enable = true;

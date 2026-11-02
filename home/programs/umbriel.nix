@@ -1,5 +1,5 @@
 { pkgs, inputs, config, ... }: {
-  # Keep `config` even if unused; it is needed to generate config.toml.
+  # # Keep `config` even if unused; it is needed to generate config.toml.
   imports = [ inputs.umbriel.homeModules.default ];
 
   programs.umbriel = {
@@ -28,6 +28,7 @@
       general = {
         autostart = [
           "noctalia"
+          "fcitx5 -d"
         ];
         xwayland = true;
         xwayland_native_resolution = false;
@@ -36,6 +37,16 @@
       };
 
       keybinds = {
+        "XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up"; allow_when_locked = true; };
+        "XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down"; allow_when_locked = true; };
+        "XF86AudioMute" = { action = "spawn:noctalia msg volume-mute"; allow_when_locked = true; repeat = false; };
+
+        # Chụp màn hình: repeat = false để tránh bấm giữ chụp liên tục
+        "Print" = { action = "spawn:noctalia msg screenshot-region"; repeat = false; };
+        "Shift+Print" = { action = "spawn:noctalia msg screenshot-fullscreen"; repeat = false; };
+        "Alt+Print" = { action = "spawn:noctalia msg screenshot-window"; repeat = false; };
+        "Mod+Print" = { action = "spawn:noctalia msg screenshot-annotate"; repeat = false; };
+
         # Applications and session
         "Mod+Return" = { action = "spawn:kitty"; repeat = false; };
         "Mod+B" = { action = "spawn:chromium"; repeat = false; };

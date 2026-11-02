@@ -8,7 +8,6 @@
     ./steam.nix
     ./warp.nix
     ./fcitx5.nix
-    ./gamemode.nix
     ./virt-manager.nix
     ./nix-ld.nix
     ./waydroid.nix

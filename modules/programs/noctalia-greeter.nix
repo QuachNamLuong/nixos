@@ -1,8 +1,6 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 
 {
-  imports = [ inputs.noctalia-greeter.nixosModules.default ];
-  
   services.displayManager.noctalia-greeter = {
     enable = true;
     

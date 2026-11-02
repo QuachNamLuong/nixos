@@ -42,6 +42,7 @@ in {
           pkgs.vscode-marketplace.golang.go
           pkgs.vscode-marketplace.jnoortheen.nix-ide
           pkgs.vscode-marketplace.a-h.templ
+          pkgs.vscode-marketplace.anthropic.claude-code
         ];
       };
 
