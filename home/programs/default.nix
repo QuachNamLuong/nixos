@@ -10,6 +10,6 @@
     ./virt-manager.nix
     ./ssh.nix
     ./devenv.nix
-    ./nixvim.nix
+    ./nixvim
   ];
 }

@@ -25,22 +25,23 @@
 
     globals.mapleader = " ";
 
-    # Keymap toàn cục (mở Telescope, nvim-tree...)
+    # Keymap toàn cục
     keymaps = [
       { mode = "n"; key = "<leader>ff"; action = "<cmd>Telescope find_files<cr>"; options.silent = true; }
       { mode = "n"; key = "<leader>fg"; action = "<cmd>Telescope live_grep<cr>"; options.silent = true; }
-      { mode = "n"; key = "<leader>e";  action = "<cmd>NvimTreeToggle<cr>";     options.silent = true; }
+      { mode = "n"; key = "<leader>e";  action = "<cmd>NvimTreeToggle<cr>"; options.silent = true; }
+      { mode = "n"; key = "<leader>t"; action = "<cmd>ToggleTerm<cr>"; options.silent = true; }
     ];
-
+    filetype.extension.tmpl = "templ";
     plugins = {
       lsp = {
         enable = true;
         servers = {
-          gopls = {
-            enable = true;
-          };
+          gopls = { enable = true; };
+          templ = { enable = true; };
+          ts_ls = { enable = true; };
+          nixd = {enable = true; };
         };
-
         keymaps = {
           lspBuf = {
             "K" = "hover";
@@ -50,11 +51,11 @@
 
       auto-save = {
         enable = true;
-        settings = {
-          debounce_delay = 1000;
-        };
+        settings = { debounce_delay = 1000; };
       };
 
+      treesitter.enable = true;
+     
       telescope = {
         enable = true;
         settings.defaults = {
@@ -76,9 +77,63 @@
       toggleterm = {
         enable = true;
         settings = {
-          direction = "horizontal"; # Mở terminal theo chiều ngang (dưới cùng)
-          size = 15;                # Chiều cao của terminal (số dòng)
-          shade_terminals = true;   # Làm tối nền terminal để dễ phân biệt
+          direction = "horizontal";
+          size = 15;
+          shade_terminals = true;
+        };
+      };
+
+      luasnip.enable = true;
+
+      # ĐÃ SỬA LẠI TOÀN BỘ KHỐI CMP DƯỚI ĐÂY
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "luasnip"; }
+            { name = "buffer"; }
+            { name = "path"; }
+          ];
+
+          mapping = {
+            "<C-Space>" = {
+              __raw = "cmp.mapping.complete()";
+            };
+
+            "<Tab>" = {
+              __raw = ''
+                cmp.mapping(function(fallback)
+                  if cmp.visible() then
+                    cmp.select_next_item()
+                  elseif require("luasnip").expand_or_jumpable() then
+                    require("luasnip").expand_or_jump()
+                  else
+                    fallback()
+                  end
+                end, { "i", "s" })
+              '';
+            };
+
+            "<S-Tab>" = {
+              __raw = ''
+                cmp.mapping(function(fallback)
+                  if cmp.visible() then
+                    cmp.select_prev_item()
+                  elseif require("luasnip").jumpable(-1) then
+                    require("luasnip").jump(-1)
+                  else
+                    fallback()
+                  end
+                end, { "i", "s" })
+              '';
+            };
+
+            "<CR>" = {
+              __raw = "cmp.mapping.confirm({ select = true })";
+            };
+          };
         };
       };
     };
