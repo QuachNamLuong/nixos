@@ -2,7 +2,7 @@
 
 {
   programs.nixvim = {
-    plugins.lsp.server.templ = {
+    plugins.lsp.servers.templ = {
       enable = true;
     };
 
