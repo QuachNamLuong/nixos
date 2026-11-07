@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       disable_netrw = true;
-      hijack_cusor = true;
+      hijack_cursor = true;
       sync_root_with_cwd = true;
     };
   };
