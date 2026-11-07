@@ -6,6 +6,8 @@
     settings = {
       user.name = "Quach Nam Luong";
       user.email = "quachnamluong@gmail.com";
+
+      pull.rebase = true;
     };
   };
 }
