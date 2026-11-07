@@ -14,7 +14,7 @@
       "github" = {
         Hostname = "github.com";
         User = "git";
-        IdentifyFile = "/home/luong/.ssh/github_key";
+        IdentityFile = "/home/luong/.ssh/github";
         IdentitiesOnly = "yes";
       };
     };
