@@ -4,11 +4,19 @@
     enable = true;
     enableDefaultConfig = false;
     # Host cụ thể của bạn
-    settings."home-server" = {
-      Hostname = "ssh.quachnamluong.dev";
-      ProxyCommand = "${pkgs.cloudflared}/bin/cloudflared access ssh --hostname %h";
-      User = "luongadmin";
-      Port = 22;
+    settings = {
+      "home-server" = {
+        Hostname = "ssh.quachnamluong.dev";
+        ProxyCommand = "${pkgs.cloudflared}/bin/cloudflared access ssh --hostname %h";
+        User = "luongadmin";
+        Port = 22;
+      };
+      "github" = {
+        Hostname = "github.com";
+        User = "git";
+        IdentifyFile = "/home/luong/.ssh/github_key";
+        IdentitiesOnly = "yes";
+      };
     };
   };
 }
